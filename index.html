@@ -31,7 +31,6 @@
     .head_Container {
       width: 80%;
       height: 82%;
-      /* border: 1px solid white; */
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -55,17 +54,13 @@
       line-height: 8rem;
     }
     .nav_container {
-      /* position: absolute; */
-      /* top: 0; */
       height: 5rem;
       width: 80%;
-      /* border: 1px solid white; */
       display: flex;
       justify-content: space-between;
     }
     .logo_container {
       width: 50%;
-      /* background: red; */
       display: flex;
       justify-content: space-between;
       align-items: baseline;
@@ -85,12 +80,10 @@
       transition: 0.7s ease-in-out;
     }
     .nav_inner_container p {
+      cursor: pointer;
       color: white;
       font-size: 1.5rem;
       font-family: 'Alata', sans-serif;
-    }
-    .nav_inner_container:hover p {
-      /* border-bottom: 3px solid white; */
     }
     .nav_inner_container div {
       height: 75%;
@@ -167,7 +160,7 @@
     padding: 4.5rem;
     opacity: 0;
   }
-  .nav_inner_container_closed {
+  .nav_inner_container_expand {
     width: 100%;
     opacity: 1;
     display: flex;
@@ -180,11 +173,14 @@
     font-family: 'Josefin Sans', sans-serif;
     font-size: 5rem;
   }
-  #nav_close {
-
+  #nav_close.nav_close_show {
+    display: block;
   }
   #nav_open {
     display: block;
+  }
+  #nav_open.nav_open_hide {
+    display: none;
   }
   .logo_container {
     width: 93%;
@@ -225,55 +221,15 @@
   var close = $("#nav_close");
   var navPanel = $(".nav_inner_container");
   open.click(function() {
-    open.css("display", "none");
-    close.css("display", "block");
-    navPanel.addClass("nav_inner_container_closed");
+    open.addClass("nav_open_hide")
+    close.addClass("nav_close_show");
+    navPanel.addClass("nav_inner_container_expand");
   });
   close.click(function() {
-    close.css("display", "none");
-    open.css("display", "block");
-    navPanel.removeClass("nav_inner_container_closed");
+    close.removeClass("nav_close_show");
+    open.removeClass("nav_open_hide");
+    navPanel.removeClass("nav_inner_container_expand");
   });
 </script>
 </body>
 </html>
-<!-- <div class="attribution">
-Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-Coded by <a href="#">Your Name Here</a>.
-</div> -->
-
-<!-- About
-Careers
-Events
-Products
-Support
-
-Immersive experiences that deliver
-
-The leader in interactive VR
-
-Founded in 2011, Loopstudios has been producing world-class virtual reality
-projects for some of the best companies around the globe. Our award-winning
-creations have transformed businesses through digital experiences that bind
-to their brand.
-
-Our creations
-
-See all
-
-Deep earth
-Night arcade
-Soccer team VR
-The grid
-From up above VR
-Pocket borealis
-The curiosity
-Make it fisheye
-
-About
-Careers
-Events
-Products
-Support
-
-© 2021 Loopstudios. All rights reserved. -->
