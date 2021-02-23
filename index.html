@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Loopstudios landing page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    /* .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); } */
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    html {
+     font-size: 62.5%;
+   }
+    main {
+      height: 100vh;
+      width: 100%;
+      background-image: url(images/desktop/image-hero.jpg);
+      background-size: 100% 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .head_Container {
+      width: 80%;
+      height: 82%;
+      /* border: 1px solid white; */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+    }
+    .inner_container {
+      height: auto;
+      width: 58%;
+      border-radius: 5px;
+      border: 2px solid white;
+      margin-top: 11rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 4rem 3rem 3rem 3rem;
+    }
+    .heading {
+      font-size: 7.5rem;
+      font-family: 'Josefin Sans', sans-serif;
+      color: white;
+      line-height: 8rem;
+    }
+    .nav_container {
+      /* position: absolute; */
+      /* top: 0; */
+      height: 5rem;
+      width: 80%;
+      /* border: 1px solid white; */
+      display: flex;
+      justify-content: space-between;
+    }
+    .logo_container {
+      width: 50%;
+      /* background: red; */
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    #logo {
+      font-size: 3rem;
+      color: white;
+      font-family: 'Alata', sans-serif;
+      z-index: 2;
+    }
+    .nav_inner_container {
+      width: 40%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-right: 2rem;
+      transition: 0.7s ease-in-out;
+    }
+    .nav_inner_container p {
+      color: white;
+      font-size: 1.5rem;
+      font-family: 'Alata', sans-serif;
+    }
+    .nav_inner_container:hover p {
+      /* border-bottom: 3px solid white; */
+    }
+    .nav_inner_container div {
+      height: 75%;
+      width: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.2s linear;
+    }
+   .nav_inner_container div:hover {
+     border-bottom: 3px solid white;
+    }
+    #nav_open {
+      right: 5rem;
+      top: 9rem;
+      display: none;
+    }
+    #nav_close {
+      right: 5rem;
+      top: 9rem;
+      display: none;
+      z-index: 2;
+    }
+
+
+   /* -------------------------------------------MEDIA QUERY-------------------- */
+@media only screen and (max-width: 1130px) {
+  html {
+    font-size: 50%;
+  }
+  main {
+    height: 58vh;
+  }
+}
+@media only screen and (max-width: 950px) {
+  html {
+    font-size: 43%;
+  }
+  .heading {
+    font-size: 6rem;
+  }
+}
+@media only screen and (max-width: 760px) {
+  main {
+    background-image: url(images/mobile/image-hero.jpg);
+    height: 100vh;
+  }
+  .head_Container {
+    align-items: center;
+    width: 100%;
+  }
+  .inner_container {
+    width: 90%;
+  }
+  #logo {
+    font-size: 5rem;
+  }
+  .nav_container {
+    width: 90%;
+  }
+  .nav_inner_container div:hover {
+    height: 8%;
+  }
+  .nav_inner_container {
+    position: absolute;
+    background: black;
+    height: 100vh;
+    width: 0;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 4.5rem;
+    opacity: 0;
+  }
+  .nav_inner_container_closed {
+    width: 100%;
+    opacity: 1;
+    display: flex;
+  }
+  .nav_inner_container div {
+    height: 10rem;
+    width: auto;
+  }
+  .nav_inner_container p {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 5rem;
+  }
+  #nav_close {
+
+  }
+  #nav_open {
+    display: block;
+  }
+  .logo_container {
+    width: 93%;
+  }
+
+}
+@media only screen and (max-width: 380px) {
+  html {
+    font-size: 35%;
+  }
+}
+  </style>
+</head>
+<body>
+  <main>
+    <div class="nav_container">
+      <div class="logo_container">
+        <p id="logo">loopstudios</p>
+        <svg id="nav_open" width="24" height="16" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" fill-rule="evenodd"><path d="M0 0h24v2H0zM0 7h24v2H0zM0 14h24v2H0z"/></g></svg>
+        <svg id="nav_close" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M17.778.808l1.414 1.414L11.414 10l7.778 7.778-1.414 1.414L10 11.414l-7.778 7.778-1.414-1.414L8.586 10 .808 2.222 2.222.808 10 8.586 17.778.808z" fill="#FFF" fill-rule="evenodd"/></svg>
+      </div>
+      <div class="nav_inner_container">
+        <div class="about"><p>ABOUT</p></div>
+        <div class="careers"><p>CAREERS</p></div>
+        <div class="events"><p>EVENTS</p></div>
+        <div class="products"><p>PRODUCTS</p></div>
+        <div class="support"><p>SUPPORT</p></div>
+      </div>
+    </div>
+    <div class="head_Container">
+     <div class="inner_container">
+       <p class="heading">IMMERSIVE EXPERIENCES THAT DELIEVER</p>
+     </div>
+    </div>
+  </main>
+<script>
+  var open = $("#nav_open");
+  var close = $("#nav_close");
+  var navPanel = $(".nav_inner_container");
+  open.click(function() {
+    open.css("display", "none");
+    close.css("display", "block");
+    navPanel.addClass("nav_inner_container_closed");
+  });
+  close.click(function() {
+    close.css("display", "none");
+    open.css("display", "block");
+    navPanel.removeClass("nav_inner_container_closed");
+  });
+</script>
+</body>
+</html>
+<!-- <div class="attribution">
+Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+Coded by <a href="#">Your Name Here</a>.
+</div> -->
+
+<!-- About
+Careers
+Events
+Products
+Support
+
+Immersive experiences that deliver
+
+The leader in interactive VR
+
+Founded in 2011, Loopstudios has been producing world-class virtual reality
+projects for some of the best companies around the globe. Our award-winning
+creations have transformed businesses through digital experiences that bind
+to their brand.
+
+Our creations
+
+See all
+
+Deep earth
+Night arcade
+Soccer team VR
+The grid
+From up above VR
+Pocket borealis
+The curiosity
+Make it fisheye
+
+About
+Careers
+Events
+Products
+Support
+
+© 2021 Loopstudios. All rights reserved. -->
