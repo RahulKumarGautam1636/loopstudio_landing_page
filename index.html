@@ -185,6 +185,9 @@
   .logo_container {
     width: 93%;
   }
+  .nav_inner_container p {
+    pointer-events: none;
+  }
 
 }
 @media only screen and (max-width: 380px) {
@@ -220,15 +223,18 @@
   var open = $("#nav_open");
   var close = $("#nav_close");
   var navPanel = $(".nav_inner_container");
+  var nav_items = $(".nav_inner_container p")
   open.click(function() {
     open.addClass("nav_open_hide")
     close.addClass("nav_close_show");
     navPanel.addClass("nav_inner_container_expand");
+    nav_items.css("pointer-events", "all");
   });
   close.click(function() {
     close.removeClass("nav_close_show");
     open.removeClass("nav_open_hide");
     navPanel.removeClass("nav_inner_container_expand");
+    nav_items.css("pointer-events", "none");
   });
 </script>
 </body>
