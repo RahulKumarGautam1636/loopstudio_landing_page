@@ -109,12 +109,14 @@
     }
     /* -----------------------------------------------page two------------------ */
     #pg_two {
-      height: 100vh;
+      height: 75rem;
       width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
+      /* padding: 20rem 0 20rem 0; */
     }
+    #pg_two * {border: 1px solid black}
     .vrContainer {
       /* height: 65%; */
       height: 53rem;
@@ -176,11 +178,12 @@
   }
   .vrContainer {
     flex-direction: column;
-    height: 75vh;
+    /* height: 75vh; */
+    height: 85rem;
   }
   .vrMan {
     width: 100%;
-    /* height: 150%; */
+    height: 100%;
   }
   .vrInfo {
     width: 100%;
@@ -258,13 +261,15 @@
   .vrContainer {
     width: 90%;
   }
+  #pg_two {
+    height: 100rem;
+  }
 
 }
 @media only screen and (max-width: 380px) {
   html {
     font-size: 35%;
   }
-
 }
   </style>
 </head>
