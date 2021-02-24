@@ -19,7 +19,7 @@
      font-size: 62.5%;
    }
     #pg_one {
-      height: 85rem;
+      height: 86rem;
       width: 100%;
       background-image: url(images/desktop/image-hero.jpg);
       background-size: 100% 100%;
@@ -115,7 +115,6 @@
       justify-content: center;
       align-items: center;
     }
-    /* #pg_two * {border: 1px solid black} */
     .vrContainer {
       height: 53rem;
       width: 80%;
@@ -149,11 +148,64 @@
       word-spacing: 2px;
     }
     .vrInfo h1 {
+      width: 100%;
       font-size: 5rem;
-      margin-bottom: 2.5rem;
+      margin-bottom: 3rem;
       font-family: 'Josefin Sans', sans-serif;
       color: hsl(0, 0%, 0%);
       font-weight: lighter;
+    }
+/* -------------------------------------------------pg_three------------------- */
+    #pg_three {
+      height: 110rem;
+      width: 100%;
+    }
+    #pg_three * {
+      /* border: 1px solid black; */
+    }
+    .creations_container {
+      height: 15%;
+    }
+    .photo_container {
+      height: 85%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 5rem;
+
+    }
+    .photo_container div {
+      height: 48%;
+      min-width: 20%;
+      margin: 1.5rem;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      border-radius: 5px;
+    }
+    #deep_earth {
+      background-image: url(images/desktop/image-deep-earth.jpg);
+    }
+    #night_arcade {
+      background-image: url(images/desktop/image-night-arcade.jpg);
+    }
+    #soccer_team {
+      background-image: url(images/desktop/image-soccer-team.jpg);
+    }
+    #the_grid {
+      background-image: url(images/desktop/image-grid.jpg);
+    }
+    #from_up {
+      background-image: url(images/desktop/image-from-above.jpg);
+    }
+    #pocket_brealis {
+      background-image: url(images/desktop/image-pocket-borealis.jpg);
+    }
+    #the_curiosity {
+      background-image: url(images/desktop/image-curiosity.jpg);
+    }
+    #fisheye {
+      background-image: url(images/desktop/image-fisheye.jpg);
     }
 
 
@@ -199,6 +251,17 @@
     background-image: url(images/mobile/image-hero.jpg);
     height: 115rem;
   }
+  #pg_three {
+    height: auto;
+  }
+  .photo_container {
+    padding: 0.8rem;
+  }
+  .photo_container div {
+    height: 30rem;
+    width: 60rem;
+    background-size: 100%;
+  }
   .head_Container {
     align-items: center;
     width: 100%;
@@ -217,8 +280,8 @@
   }
   .nav_inner_container {
     position: absolute;
-    background: black;
-    height: 80rem;
+    background: hsl(0, 0%, 0%);
+    height: 115rem;
     width: 0;
     top: 0;
     left: 0;
@@ -305,6 +368,22 @@
       to their brand.</p>
     </div>
   </div>
+</main>
+
+<main id="pg_three">
+ <div class="creations_container">
+
+ </div>
+ <div class="photo_container">
+   <div id="deep_earth"></div>
+   <div id="night_arcade"></div>
+   <div id="soccer_team"></div>
+   <div id="the_grid"></div>
+   <div id="from_up"></div>
+   <div id="pocket_brealis"></div>
+   <div id="the_curiosity"></div>
+   <div id="fisheye"></div>
+ </div>
 </main>
 
 <script>
