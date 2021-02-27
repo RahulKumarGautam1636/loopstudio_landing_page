@@ -65,7 +65,7 @@
       justify-content: space-between;
       align-items: baseline;
     }
-    #logo {
+    .logo {
       font-size: 3rem;
       color: white;
       font-family: 'Alata', sans-serif;
@@ -128,9 +128,10 @@
       background-size: 100% 100%;
     }
     .vrInfo {
+      /* position: absolute; */
       margin-left: -15rem;
-      height: 65%;
-      width: 60%;
+      height: 68%;
+      width: 68%;
       background: #fff;
       display: flex;
       justify-content: flex-end;
@@ -139,6 +140,8 @@
       align-self: flex-end;
       padding: 2rem 8rem 0 8rem;
       align-items: baseline;
+      /* background: red; */
+      /* right: 0; */
     }
     .vrInfo p {
       font-size: 1.6rem;
@@ -164,7 +167,12 @@
       /* border: 1px solid black; */
     }
     .creations_container {
-      height: 15%;
+      height: 5%;
+      /* background: yellow; */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 15rem 0 15rem;
     }
     .photo_container {
       height: 85%;
@@ -173,11 +181,11 @@
       justify-content: center;
       align-items: center;
       padding: 5rem;
-
+      /* background: red; */
     }
     .photo_container div {
       height: 48%;
-      min-width: 20%;
+      min-width: 19.7%;
       margin: 1.5rem;
       background-repeat: no-repeat;
       background-size: 100% 100%;
@@ -206,6 +214,98 @@
     }
     #fisheye {
       background-image: url(images/desktop/image-fisheye.jpg);
+    }
+    .see_all {
+      width: 12rem;
+      height: 3.5rem;
+      background: transparent;
+      border: 1px solid black;
+    }
+    .see_all {
+     font-family: 'Alata', sans-serif;
+     letter-spacing: 1px;
+    }
+    #creations {
+     font-family: 'Josefin Sans', sans-serif;
+     font-weight: lighter;
+     font-size: 4rem;
+    }
+    footer * {
+      /* border: 1px solid white; */
+    }
+    footer {
+      height: 23rem;
+      background: black;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .left {
+      height: 50%;
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+    }
+    .loop {
+
+      text-align: left;
+      margin-bottom: 3rem;
+    }
+    .footer_nav_container {
+      width: 40%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-right: 2rem;
+      transition: 0.7s ease-in-out;
+    }
+    .footer_nav_container p {
+      cursor: pointer;
+      color: white;
+      font-size: 1.5rem;
+      font-family: 'Alata', sans-serif;
+    }
+    .footer_nav_container div {
+      height: 75%;
+      width: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.2s linear;
+    }
+    .footer_nav_container div:hover {
+      border-bottom: 3px solid white;
+     }
+    .right {
+      height: 50%;
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+
+    }
+    .icons {
+
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 3rem;
+      align-items: flex-end;
+
+    }
+    .copyrights {
+      width: 100%;
+      text-align: right;
+    }
+    footer p {
+      font-family: 'Alata', sans-serif;
+      color: white;
+      font-size: 2.2rem;
+      word-spacing: 5px;
     }
 
 
@@ -244,6 +344,9 @@
   #pg_two {
     height: 105rem;
   }
+  .photo_container {
+
+  }
 
 }
 @media only screen and (max-width: 760px) {
@@ -255,7 +358,7 @@
     height: auto;
   }
   .photo_container {
-    padding: 0.8rem;
+    /* padding: 0.8rem; */
   }
   .photo_container div {
     height: 30rem;
@@ -269,7 +372,7 @@
   .inner_container {
     width: 90%;
   }
-  #logo {
+  .logo {
     font-size: 5rem;
   }
   .nav_container {
@@ -325,6 +428,49 @@
   #pg_two {
     height: 100rem;
   }
+  footer {
+    padding: 8rem 0 0 0;
+    height: 100rem;
+    flex-direction: column;
+  }
+  .left, .right {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .left {
+    height: 100%;
+    /* background: red; */
+    justify-content: flex-start;
+  }
+  .right {
+    height: 30%;
+
+  }
+  .icons {
+    padding-top: 2rem;
+   /* background: red; */
+   width: 35%;
+   margin-bottom: 4rem;
+  }
+  .copyrights {
+    height: 60%;
+    text-align: center;
+  }
+  .copyrights p {
+    font-size: 2.5rem;
+  }
+  .footer_nav_container div {
+    height: 5rem;
+  }
+  .footer_nav_container {
+    flex-direction: column;
+    height: 80%;
+  }
+  .footer_nav_container p {
+    font-size: 2rem;
+  }
+
 }
 @media only screen and (max-width: 380px) {
   html {
@@ -335,7 +481,11 @@
   html {
     font-size: 30%;
   }
+  .icons {
+    width: 50%;
+  }
 }
+
   </style>
 </head>
 <body>
@@ -375,9 +525,10 @@
 </main>
 
 <main id="pg_three">
- <div class="creations_container">
-
- </div>
+  <div class="creations_container">
+    <p id="creations">OUR CREATIONS</p>
+    <button class="see_all" type="button" name="button"><span>SEE ALL</span></button>
+  </div>
  <div class="photo_container">
    <div id="deep_earth"></div>
    <div id="night_arcade"></div>
@@ -389,6 +540,32 @@
    <div id="fisheye"></div>
  </div>
 </main>
+
+<footer>
+  <div class="left">
+  <div class="loop">
+    <h1 class="logo">loopstudios</h1>
+  </div>
+  <div style="width: 80%; transform: translateX(1rem)" class="footer_nav_container">
+    <div class="about"><p>ABOUT</p></div>
+    <div class="careers"><p>CAREERS</p></div>
+    <div class="events"><p>EVENTS</p></div>
+    <div class="products"><p>PRODUCTS</p></div>
+    <div class="support"><p>SUPPORT</p></div>
+  </div>
+  </div>
+  <div class="right">
+   <div class="icons">
+    <img src="images\icon-facebook.svg" alt="fb">
+    <img src="images\icon-twitter.svg" alt="twitter">
+    <img src="images\icon-pinterest.svg" alt="pint">
+    <img src="images\icon-instagram.svg" alt="inst">
+  </div>
+   <div class="copyrights">
+    <p>©2021 Loopstudios. All rights reserved.</p>
+   </div>
+  </div>
+</footer>
 
 <script>
   var open = $("#nav_open");
@@ -410,3 +587,40 @@
 </script>
 </body>
 </html>
+<!-- <div class="attribution">
+Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+Coded by <a href="#">Your Name Here</a>.
+</div> -->
+
+<!-- About
+Careers
+Events
+Products
+Support
+
+Immersive experiences that deliver
+
+The leader in interactive VR
+
+
+
+Our creations
+
+See all
+
+Deep earth
+Night arcade
+Soccer team VR
+The grid
+From up above VR
+Pocket borealis
+The curiosity
+Make it fisheye
+
+About
+Careers
+Events
+Products
+Support
+
+© 2021 Loopstudios. All rights reserved. -->
