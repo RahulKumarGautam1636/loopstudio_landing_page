@@ -12,8 +12,8 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    /* .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); } */
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
     * {margin: 0; padding: 0; box-sizing: border-box;}
     html {
      font-size: 62.5%;
@@ -126,6 +126,7 @@
       background-image: url(images/desktop/image-interactive.jpg);
       background-repeat: no-repeat;
       background-size: 100% 100%;
+      /* z-index: 0; */
     }
     .vrInfo {
       /* border: 1px solid black; */
@@ -140,6 +141,7 @@
       align-self: flex-end;
       padding: 2rem 8rem 0 8rem;
       align-items: baseline;
+      z-index: 2;
     }
     .vrInfo p {
       font-size: 1.6rem;
@@ -171,7 +173,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 2rem 15rem 0 15rem;
+      padding: 2rem 16rem 0 15rem;
     }
     .photo_container {
       height: 85%;
@@ -189,6 +191,20 @@
       background-repeat: no-repeat;
       background-size: 100% 100%;
       border-radius: 5px;
+      transition: 0.2s linear;
+      box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.2),
+                   15px  15px 15px rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      justify-content: flex-end;
+      padding: 3rem;
+    }
+    .photo_container div p {
+      font-size: 3.5rem;
+      color: white;
+      width: 20rem;
+      font-family: 'Josefin Sans', sans-serif;
     }
     #deep_earth {
       background-image: url(images/desktop/image-deep-earth.jpg);
@@ -214,11 +230,18 @@
     #fisheye {
       background-image: url(images/desktop/image-fisheye.jpg);
     }
+    .photo_container div:hover {
+      opacity: 0.4;
+
+    }
     .see_all {
       width: 12rem;
       height: 3.5rem;
-      background: transparent;
+      background: black;
       border: 1px solid black;
+    }
+    .see_all span {
+      color: white;
     }
     .see_all {
      font-family: 'Alata', sans-serif;
@@ -267,7 +290,7 @@
       font-family: 'Alata', sans-serif;
     }
     .footer_nav_container div {
-      height: 75%;
+      height: 3rem;
       width: 3rem;
       display: flex;
       justify-content: center;
@@ -311,6 +334,10 @@
 @media only screen and (max-width: 1130px) {
   html {
     font-size: 50%;
+  }
+  .creations_container {
+    padding-right: 14rem;
+    padding-left: 14rem;
   }
 }
 @media only screen and (max-width: 950px) {
@@ -473,10 +500,13 @@
   }
   .creations_container {
     width: 100%;
-    /* text-align: center; */
     justify-content: center;
     align-items: center;
     padding: 0 0 1rem 0;
+  }
+  .photo_container div p {
+    width: 30rem;
+    font-size: 5rem;
   }
 
 }
@@ -538,14 +568,14 @@
     <button class="see_all" type="button" name="button"><span>SEE ALL</span></button>
   </div>
  <div class="photo_container">
-   <div id="deep_earth"></div>
-   <div id="night_arcade"></div>
-   <div id="soccer_team"></div>
-   <div id="the_grid"></div>
-   <div id="from_up"></div>
-   <div id="pocket_brealis"></div>
-   <div id="the_curiosity"></div>
-   <div id="fisheye"></div>
+   <div id="deep_earth"><p>DEEP EARTH</p></div>
+   <div id="night_arcade"><p>NIGHT ARCADE</p></div>
+   <div id="soccer_team"><p>SOCCER TEAM VR</p></div>
+   <div id="the_grid"><p>THE GRID</p></div>
+   <div id="from_up"><p>FROM UP ABOVE VR</p></div>
+   <div id="pocket_brealis"><p>ROCKET BOREALIS</p></div>
+   <div id="the_curiosity"><p>THE CURIOSITY</p></div>
+   <div id="fisheye"><p>MAKE IT FISHEYE</p></div>
  </div>
 </main>
 
@@ -575,6 +605,10 @@
   </div>
 </footer>
 
+<div class="attribution">
+Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+Coded by <a href="#">Rahul Kumar Gautam</a>.
+</div>
 <script>
   var open = $("#nav_open");
   var close = $("#nav_close");
@@ -593,9 +627,11 @@
     nav_items.css("pointer-events", "none");
   });
 </script>
+
+<script src="https://unpkg.com/vanilla-tilt@1.7.0/lib/vanilla-tilt.js"></script>
+<script> VanillaTilt.init(document.querySelectorAll(".vrMan"),{max: 20,	speed: 400})</script>
+<script> VanillaTilt.init(document.querySelectorAll(".photo_container div"),{max: 30,	speed: 400})</script>
+
+
 </body>
 </html>
-<!-- <div class="attribution">
-Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-Coded by <a href="#">Your Name Here</a>.
-</div> -->
