@@ -16,6 +16,11 @@
       background-size: 100% 100%;
 
     }
+    #snowContainer {
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+    }
     .snowflake {
       max-height: 1.5rem;
       position: absolute;
@@ -31,10 +36,10 @@
        0%   {top: 0; transform: translateX(150px) rotate(0)}
        100% {top: 110%; transform: translateX(0) rotate(360deg);}
       }
-
     </style>
   </head>
-  <body id="snowContainer">
+  <body>
+    <!-- <div id="snowContainer"></div> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
     $(function() {
@@ -45,6 +50,7 @@
         const animationsTypes = ["leftFlow", "rightFlow"];
         const movementType = ["ease-in", "ease-in", "ease-in-out"];
         function addSnowFlakes() {
+          $("body").append("<div id='snowContainer'></div>");
           for (var i = 0; i < snowFlakesCount; i++) {
             $("#snowContainer").append("<img class='snowflake' src=" + snowFlakeTypes[Math.floor(Math.random() * 4)] + " alt='snowflake'>");
           }
