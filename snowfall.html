@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Snow Fall with Javascript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="snowfall.css"> -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/fontawesome.min.css"> -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"> -->
+    <style>
+    body {
+      position: relative;
+      overflow: hidden;
+      background: #000;
+      height: 100vh;
+      background: url("anime.jpg");
+      background-size: 100% 100%;
+
+    }
+    .snowflake {
+      max-height: 1.5rem;
+      position: absolute;
+      color: #fff;
+      margin-top: -30px;
+      /* animation-name: leftFlow; */
+      animation-iteration-count: infinite;
+      /* animation-timing-function: ease-in; */
+    }
+    .snowflake:nth-child(even) {
+      /* height: 0.8rem; */
+      /* animation-name: rightFlow; */
+      /* animation-timing-function: ease-in-out; */
+    }
+    /* img:nth-child(2n+2) {
+      height: 1.1rem;
+    } */
+    @keyframes leftFlow {
+      0%   {top: 0; transform: translateX(0) rotate(0)}
+      100% {top: 110%; transform: translateX(150px) rotate(360deg);}
+     }
+     @keyframes rightFlow {
+       0%   {top: 0; transform: translateX(150px) rotate(0)}
+       100% {top: 110%; transform: translateX(0) rotate(360deg);}
+      }
+
+    </style>
+  </head>
+  <body onload="startAnimation()">
+    <img class="snowflake" src="snow.gif" alt="snowflake">
+    <img class="snowflake" src="snow2.png" alt="snowflake-blue">
+    <img class="snowflake" src="snow.gif" alt="snowflake">
+    <img class="snowflake" src="gold.png" alt="snowflake">
+    <img class="snowflake" src="snow.gif" alt="snowflake">
+    <img class="snowflake" src="snow2.png" alt="snowflake-blue">
+    <img class="snowflake" src="snow.gif" alt="snowflake">
+    <img class="snowflake" src="gold.png" alt="snowflake">
+    <img class="snowflake" src="snow.gif" alt="snowflake">
+    <img class="snowflake" src="snow2.png" alt="snowflake-blue">
+    <img class="snowflake" src="snow.gif" alt="snowflake">
+    <img class="snowflake" src="gold.png" alt="snowflake">
+    <img class="snowflake" src="snow.gif" alt="snowflake">
+    <img class="snowflake" src="snow2.png" alt="snowflake-blue">
+    <img class="snowflake" src="snow.gif" alt="snowflake">
+    <img class="snowflake" src="gold.png" alt="snowflake">
+    <img class="snowflake" src="snow.gif" alt="snowflake">
+    <img class="snowflake" src="snow2.png" alt="snowflake-blue">
+    <img class="snowflake" src="snow.gif" alt="snowflake">
+    <img class="snowflake" src="gold.png" alt="snowflake">
+    <img class="snowflake" src="snow.gif" alt="snowflake">
+    <img class="snowflake" src="snow2.png" alt="snowflake-blue">
+    <img class="snowflake" src="snow.gif" alt="snowflake">
+    <img class="snowflake" src="gold.png" alt="snowflake">
+    <img class="snowflake" src="snow.gif" alt="snowflake">
+    <img class="snowflake" src="snow2.png" alt="snowflake-blue">
+    <img class="snowflake" src="snow.gif" alt="snowflake">
+    <img class="snowflake" src="gold.png" alt="snowflake">
+    <img class="snowflake" src="snow.gif" alt="snowflake">
+    <img class="snowflake" src="snow2.png" alt="snowflake-blue">
+    <img class="snowflake" src="snow.gif" alt="snowflake">
+    <img class="snowflake" src="gold.png" alt="snowflake">
+    <img class="snowflake" src="snow.gif" alt="snowflake">
+    <img class="snowflake" src="snow2.png" alt="snowflake-blue">
+    <img class="snowflake" src="snow.gif" alt="snowflake">
+    <img class="snowflake" src="gold.png" alt="snowflake">
+    <img class="snowflake" src="snow.gif" alt="snowflake">
+    <img class="snowflake" src="snow2.png" alt="snowflake-blue">
+    <img class="snowflake" src="snow.gif" alt="snowflake">
+    <img class="snowflake" src="gold.png" alt="snowflake">
+    <script src="js\jquery-3.6.0.min.js"></script>
+    <script>
+        var snowList = $(".snowflake");
+        var max = 9;
+        var min = 5;
+        var animationsTypes = ["leftFlow", "rightFlow"];
+        var movementType = ["ease-in", "ease-in", "ease-in-out"];
+        function startAnimation() {
+          for (var i = 0; i < snowList.length; i++) {
+            snowList[i].style.left = Math.floor(Math.random() * 100) + "%";
+            snowList[i].style.animationDelay = (Math.random() * 3) + "s";
+            snowList[i].style.animationDuration = Math.random() * (max - min + 1) + min + "s";
+            snowList[i].style.animationName = animationsTypes[Math.floor(Math.random() * 2)];
+            snowList[i].style.animationTimingFunction = movementType[Math.floor(Math.random() * 3)];
+            snowList[i].style.height = Math.floor(Math.random() * (25 - 15 + 1) + 15) + "px";
+          }
+        }
+        function changeAnimation() {
+          for (var i = 0; i < snowList.length; i++) {
+            snowList[i].style.animationDelay = (Math.random() * 3) + "s";
+            snowList[i].style.animationDuration = Math.random() * (max - min + 1) + min + "s";
+          }
+        }
+    </script>
+  </body>
+</html>
