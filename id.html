@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ID Card using html</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body class="vh-100 d-flex justify-content-center align-items-center" style="background: #d6d6d6;">
+    <div id="id-card" class="bg-secondary overflow-hidden bg-white d-flex flex-column justify-content-between" style="padding:0;padding: 25px 0 7px 0;width:38rem;border-radius: 10px;box-shadow: -10px -10px 10px rgb(255 255 255 / 20%), 15px 15px 15px rgb(0 0 0 / 10%);">
+      <div class="py-4 bg-primary d-flex justify-content-center align-items-center text-white">
+        <i class="bx bxs-landscape h1 me-3 mb-0 text-warning"></i>
+        <span class="h2 mb-0">Hospital Name</span>
+      </div>
+      <div class="d-flex align-items-center p-4">
+        <div class="me-4" style="width: 35%;">
+          <img class="img-fluid" src="user.jpg" alt="user" style="border-radius: 5px;">
+        </div>
+        <div style="width: 65%;">
+          <h3 class="mb-1 fw-bold">Dr. John Doe</h3>
+          <h5 class="text-danger mb-3">Surgeon</h4>
+          <div class="d-flex mt-2">
+            <div class="w-50">
+              <h6 class="mb-1 text-primary">ID No</h6>
+              <h6>000000000</h6>
+              <h6 class="mb-1 text-primary">Joined Date</h6>
+              <h6>01/05/2020</h6>
+              <h6 class="mb-1 text-primary">Expiration</h6>
+              <h6 class="mb-0">10/12/2028</h6>
+            </div>
+            <div class="w-50 d-flex flex-column justify-content-end text-center">
+              <h6 class="text-primary">Your Signature</h6>
+              <h4 class="mb-3">Your Sincerely</h4>
+              <img class="img-fluid" src="barcode.jpg" alt="barcode" style="height: 3.2rem;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script src="js\jquery-3.6.0.min.js"></script>
+  </body>
+</html>
