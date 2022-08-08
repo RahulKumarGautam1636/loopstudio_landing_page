@@ -6,37 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"> -->
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!-- <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'> -->
+    <style>
+      .padding-Y {
+        padding-top: clamp(3px, 1.6vw, 1rem) !important;
+        padding-bottom: clamp(3px, 1.6vw, 1rem) !important;
+      }
+      .padding-4 {
+          padding: clamp(3px, 4vw, 1.5rem) !important;
+      }
+      .marginEnd-4 {
+          margin-right: clamp(3px, 3vw, 1.5rem) !important;
+      }
+      .marginBottom-1 {
+          margin-bottom: clamp(1px, 1vw, 0.25rem) !important;
+      }
+      h6 {
+          font-size: clamp(2px, 3vw, 1rem) !important;
+          margin-bottom: clamp(2px, 1vw, 0.5rem) !important;
+      }
+      .marginBottom-3 {
+          margin-bottom: clamp(3px, 2vw, 1rem) !important;
+      }
+    </style>
   </head>
-  <body class="vh-100 d-flex justify-content-center align-items-center" style="background: #d6d6d6;">
-    <div id="id-card" class="bg-secondary overflow-hidden bg-white d-flex flex-column justify-content-between" style="padding:0;padding: 25px 0 7px 0;width:38rem;border-radius: 10px;box-shadow: -10px -10px 10px rgb(255 255 255 / 20%), 15px 15px 15px rgb(0 0 0 / 10%);">
-      <div class="py-4 bg-primary d-flex justify-content-center align-items-center text-white">
-        <i class="bx bxs-landscape h1 me-3 mb-0 text-warning"></i>
-        <span class="h2 mb-0">Hospital Name</span>
+  <body class="vh-100 d-flex justify-content-center align-items-center p-4" style="background: #d6d6d6;">
+    <div id="id-card" class="bg-secondary overflow-hidden bg-white d-flex flex-column justify-content-between" style="padding:0;padding: clamp(3px, 4vw, 17px) 0;width:38rem;border-radius: 10px;box-shadow: -10px -10px 10px rgb(255 255 255 / 20%), 15px 15px 15px rgb(0 0 0 / 10%);">
+      <div class="padding-Y d-flex justify-content-center align-items-center text-white" style="background: linear-gradient(to right, #99939f 0%, #4280c1 100%);">
+        <i style="font-size: clamp(5px, 6vw, 1.5rem);" class="bx bxs-landscape h1 me-3 mb-0 text-warning"></i>
+        <!-- <img style="height: clamp(5px, 8vw, 2.5rem); border-radius: 50%;" src="544.png" class="me-2" alt="logo"> -->
+        <span class="h2 mb-0" style="font-size: clamp(5px, 5vw, 1.5rem);">Hospital Name</span>
       </div>
-      <div class="d-flex align-items-center p-4">
-        <div class="me-4" style="width: 35%;">
-          <img class="img-fluid" src="user.jpg" alt="user" style="border-radius: 5px;">
+      <div class="d-flex align-items-center padding-4">
+        <div class="marginEnd-4" style="width: 35%;">
+          <img class="img-fluid" src="https://rahulkumargautam1636.github.io/loopstudio_landing_page/user.jpg" alt="user" style="border-radius: 5px;">
         </div>
         <div style="width: 65%;">
-          <h3 class="mb-1 fw-bold">Dr. John Doe</h3>
-          <h5 class="text-danger mb-3">Surgeon</h4>
-          <div class="d-flex mt-2">
+          <h3 class="marginBottom-1 fw-bold" style="font-size: clamp(5px, 4vw, 1.5rem);">Dr. John Doe</h3>
+          <h5 class="text-danger marginBottom-3" style="font-size: clamp(5px, 3.5vw, 1.2rem);">Surgeon</h5>
+          <div class="d-flex">
             <div class="w-50">
-              <h6 class="mb-1 text-primary">ID No</h6>
+              <h6 class="marginBottom-1 text-primary">ID No</h6>
               <h6>000000000</h6>
-              <h6 class="mb-1 text-primary">Joined Date</h6>
+              <h6 class="marginBottom-1 text-primary">Joined Date</h6>
               <h6>01/05/2020</h6>
-              <h6 class="mb-1 text-primary">Expiration</h6>
+              <h6 class="marginBottom-1 text-primary">Expiration</h6>
               <h6 class="mb-0">10/12/2028</h6>
             </div>
             <div class="w-50 d-flex flex-column justify-content-end text-center">
               <h6 class="text-primary">Your Signature</h6>
-              <h4 class="mb-3">Your Sincerely</h4>
-              <img class="img-fluid" src="barcode.jpg" alt="barcode" style="height: 3.2rem;">
+              <h4 class="marginBottom-3" style="font-size: clamp(5px, 3.5vw, 1.5rem);">Your Sincerely</h4>
+              <img class="img-fluid" src="https://rahulkumargautam1636.github.io/loopstudio_landing_page/barcode.jpg" alt="barcode" style="height: clamp(5px, 8vw, 3.2rem);">
             </div>
           </div>
         </div>
+      </div>
+      <div class="py-1 d-flex justify-content-center align-items-center text-white" style="background: linear-gradient(to right, #99939f 0%, #4280c1 100%);">
+        <!-- <i style="font-size: clamp(5px, 6vw, 1.5rem);" class="bx bxs-landscape h1 me-3 mb-0 text-warning"></i> -->
+        <span class="h2 mb-0" style="font-size: clamp(5px, 2.8vw, 17px);">REGISTRATION CARD</span>
       </div>
     </div>
   </body>
